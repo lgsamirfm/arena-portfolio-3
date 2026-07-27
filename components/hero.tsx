@@ -4,7 +4,12 @@ import SocialRail from "./social-rail";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-svh flex-col items-center gap-10 overflow-hidden px-5 pt-28 pb-14 sm:pt-32 lg:block lg:min-h-screen lg:gap-0 lg:p-0">
+    // overflow-x-clip on mobile, not overflow-hidden: the desktop layout needs
+    // horizontal clipping for the oversized headline, but clipping vertically
+    // traps the stacked mobile content and kills page scrolling on short
+    // viewports. Desktop is absolutely positioned and never overflows, so it
+    // keeps the original overflow-hidden.
+    <section className="relative flex min-h-svh flex-col items-center gap-10 overflow-x-clip px-5 pt-28 pb-14 sm:pt-32 lg:block lg:min-h-screen lg:gap-0 lg:overflow-hidden lg:p-0">
       {/* Big display name */}
       <h1 className="animate-rise pointer-events-none z-10 w-full text-center leading-[0.82] font-semibold tracking-[-0.045em] select-none lg:absolute lg:top-[17%] lg:left-1/2 lg:-translate-x-1/2 lg:whitespace-nowrap">
         <span className="block text-[19vw] lg:inline lg:text-[14.2vw]">
@@ -21,7 +26,7 @@ export default function Hero() {
         <h2 className="text-2xl w-fit cursor-target font-semibold tracking-tight sm:text-[26px]">
           UI/UX Designer
         </h2>
-        <p className="mt-2.5 text-[13px] cursor-target text-red-200 leading-relaxed text-muted sm:text-sm">
+        <p className="mt-2.5 text-[13px] cursor-target leading-relaxed text-subtle sm:text-sm">
           Designing digital products that are clear, usable, and conversion
           focused.
         </p>
