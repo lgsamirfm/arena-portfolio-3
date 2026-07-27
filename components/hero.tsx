@@ -1,0 +1,58 @@
+import Image from "next/image";
+import { ArrowUpRight } from "./icons";
+import SocialRail from "./social-rail";
+
+export default function Hero() {
+  return (
+    <section className="relative flex min-h-svh flex-col items-center gap-10 overflow-hidden px-5 pt-28 pb-14 sm:pt-32 lg:block lg:min-h-screen lg:gap-0 lg:p-0">
+      {/* Big display name */}
+      <h1 className="animate-rise pointer-events-none z-10 w-full text-center leading-[0.82] font-semibold tracking-[-0.045em] select-none lg:absolute lg:top-[17%] lg:left-1/2 lg:-translate-x-1/2 lg:whitespace-nowrap">
+        <span className="block text-[19vw] lg:inline lg:text-[14.2vw]">
+          <span className="text-hollow">DYMAS</span>{" "}
+          <span className="text-ink">ALFIN</span>
+        </span>
+      </h1>
+
+      {/* Left — intro copy */}
+      <div
+        className="animate-rise z-20 max-w-[22rem] text-center lg:absolute lg:top-1/2 lg:left-14 lg:-translate-y-[38%] lg:text-left xl:left-20"
+        style={{ animationDelay: "220ms" }}
+      >
+        <h2 className="text-2xl font-semibold tracking-tight sm:text-[26px]">
+          UI/UX Designer
+        </h2>
+        <p className="mt-2.5 text-[13px] leading-relaxed text-muted sm:text-sm">
+          Designing digital products that are clear, usable, and conversion
+          focused.
+        </p>
+        <a
+          href="#contact"
+          className="group mt-5 inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-medium tracking-tight text-white transition-transform duration-300 hover:-translate-y-0.5"
+        >
+          Let&rsquo;s collaborate
+          <span className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+            <ArrowUpRight />
+          </span>
+        </a>
+      </div>
+
+      {/* Center — portrait, layered above the headline */}
+      <div className="animate-fade z-[15] flex w-full justify-center lg:absolute lg:inset-x-0 lg:bottom-0">
+        <Image
+          src="/portrait.png"
+          alt="Portrait of Dymas Alfin"
+          width={1078}
+          height={1012}
+          priority
+          sizes="(max-width: 1024px) 70vw, 52vw"
+          className="h-auto w-[70vw] max-w-[340px] object-contain object-bottom [mask-image:linear-gradient(to_bottom,black_86%,transparent_100%)] lg:max-h-[72vh] lg:w-[52vw] lg:max-w-[640px] lg:[mask-image:none]"
+        />
+      </div>
+
+      {/* Right — social links */}
+      <div className="z-20 lg:absolute lg:right-14 lg:bottom-[9%] xl:right-20">
+        <SocialRail />
+      </div>
+    </section>
+  );
+}
