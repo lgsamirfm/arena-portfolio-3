@@ -17,7 +17,7 @@ export default function Navbar() {
         {/* Left — availability pill */}
         <a
           href="#contact"
-          className="group inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-3 py-2 text-[11px] font-medium tracking-tight text-ink shadow-[0_2px_14px_rgba(13,13,13,0.09)] ring-1 ring-black/5 transition hover:shadow-[0_4px_20px_rgba(13,13,13,0.14)] sm:px-4 sm:text-xs"
+          className="group cursor-target inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-3 py-2 text-[11px] font-medium tracking-tight text-ink shadow-[0_2px_14px_rgba(13,13,13,0.09)] ring-1 ring-black/5 transition hover:shadow-[0_4px_20px_rgba(13,13,13,0.14)] sm:px-4 sm:text-xs"
         >
           <span className="relative flex h-2 w-2 shrink-0">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-signal opacity-70" />
@@ -32,7 +32,7 @@ export default function Navbar() {
             <li key={link.label}>
               <a
                 href={link.href}
-                className="group relative inline-flex items-baseline gap-1 text-[15px] font-medium tracking-tight text-ink"
+                className="group cursor-target relative inline-flex items-baseline gap-1 text-[15px] font-medium tracking-tight text-ink"
               >
                 <span className="relative">
                   {link.label}
@@ -51,7 +51,7 @@ export default function Navbar() {
         {/* Right — CTA */}
         <a
           href="#contact"
-          className="group inline-flex shrink-0 items-center gap-2 rounded-full bg-ink px-4 py-2.5 text-[13px] font-medium tracking-tight text-white transition-transform duration-300 hover:-translate-y-0.5 sm:px-5 sm:py-3 sm:text-sm"
+          className="group cursor-target inline-flex shrink-0 items-center gap-2 rounded-full bg-ink px-4 py-2.5 text-[13px] font-medium tracking-tight text-white transition-transform duration-300 hover:-translate-y-0.5 sm:px-5 sm:py-3 sm:text-sm"
         >
           Let&rsquo;s Talk
           <span className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">

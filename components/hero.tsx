@@ -15,19 +15,19 @@ export default function Hero() {
 
       {/* Left — intro copy */}
       <div
-        className="animate-rise z-20 max-w-[22rem] text-center lg:absolute lg:top-1/2 lg:left-14 lg:-translate-y-[38%] lg:text-left xl:left-20"
+        className="animate-rise z-20 max-w-[22rem] text-center  lg:absolute lg:top-auto lg:bottom-[20%] lg:left-14 lg:max-w-[20rem] lg:text-left xl:left-20 xl:max-w-[22rem]"
         style={{ animationDelay: "220ms" }}
       >
-        <h2 className="text-2xl font-semibold tracking-tight sm:text-[26px]">
+        <h2 className="text-2xl w-fit cursor-target font-semibold tracking-tight sm:text-[26px]">
           UI/UX Designer
         </h2>
-        <p className="mt-2.5 text-[13px] leading-relaxed text-muted sm:text-sm">
+        <p className="mt-2.5 text-[13px] cursor-target text-red-200 leading-relaxed text-muted sm:text-sm">
           Designing digital products that are clear, usable, and conversion
           focused.
         </p>
         <a
           href="#contact"
-          className="group mt-5 inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-medium tracking-tight text-white transition-transform duration-300 hover:-translate-y-0.5"
+          className="group cursor-target mt-5 inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-medium tracking-tight text-white transition-transform duration-300 hover:-translate-y-0.5"
         >
           Let&rsquo;s collaborate
           <span className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
@@ -45,7 +45,7 @@ export default function Hero() {
           height={1012}
           priority
           sizes="(max-width: 1024px) 70vw, 52vw"
-          className="h-auto w-[70vw] max-w-[340px] object-contain object-bottom [mask-image:linear-gradient(to_bottom,black_86%,transparent_100%)] lg:max-h-[72vh] lg:w-[52vw] lg:max-w-[640px] lg:[mask-image:none]"
+          className="h-auto  w-[70vw] max-w-[340px] object-contain object-bottom [mask-image:linear-gradient(to_bottom,black_86%,transparent_100%)] lg:max-h-[72vh] lg:w-[52vw] lg:max-w-[640px] lg:[mask-image:none]"
         />
       </div>
 

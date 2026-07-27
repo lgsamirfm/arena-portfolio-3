@@ -13,7 +13,7 @@ export default function SocialRail() {
       {socials.map(({ label, Icon, href }, i) => (
         <li
           key={label}
-          className="animate-rise"
+          className="animate-rise cursor-target" 
           style={{ animationDelay: `${560 + i * 90}ms` }}
         >
           <a
