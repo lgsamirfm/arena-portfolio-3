@@ -16,8 +16,8 @@ export default function Hero() {
       {/* Big display name */}
       <h1 className="animate-rise pointer-events-none z-10 w-full text-center leading-[0.82] font-semibold tracking-[-0.045em] select-none lg:absolute lg:top-[17%] lg:left-1/2 lg:-translate-x-1/2 lg:whitespace-nowrap">
         <span className="block text-[19vw] lg:inline lg:text-[14.2vw]">
-          <span className="text-hollow">DYMAS</span>{" "}
-          <span className="text-ink">ALFIN</span>
+          <span className="text-hollow">LGS</span>{" "}
+          <span className="text-ink">AMIRFM</span>
         </span>
       </h1>
 
