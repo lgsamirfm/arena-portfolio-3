@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import { ArrowUpRight } from "./icons";
 
 const links = [
-  { label: "Work", meta: "[40]", href: "#work" },
+  { label: "Work", meta: "[40]", href: "/work" },
   { label: "Service", meta: "[4]", href: "#service" },
+  { label: "Main", meta: "", href: "/" },
   { label: "Experience", meta: "[9y+]", href: "#experience" },
   { label: "Contact", meta: "", href: "#contact" },
 ];

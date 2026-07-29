@@ -1,22 +1,20 @@
-import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 import TargetCursor from "@/components/TargetCursor";
+import Work from "@/components/work";
 
-
-
-export default function Home() {
+export default function WorkPage() {
   return (
     <main className="relative min-h-svh bg-paper">
-      <TargetCursor 
+      <TargetCursor
         spinDuration={2}
         hideDefaultCursor
         parallaxOn
-  hoverDuration={0.2}
-  cursorColor="#000"
-  cursorColorOnTarget="#000"
-/>
+        hoverDuration={0.2}
+        cursorColor="#000"
+        cursorColorOnTarget="#000"
+      />
       <Navbar />
-      <Hero />
+      <Work />
     </main>
   );
 }
