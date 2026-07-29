@@ -9,7 +9,7 @@ const socials = [
 
 export default function SocialRail() {
   return (
-    <ul className="flex flex-row flex-wrap items-center justify-center gap-2.5 lg:flex-col lg:items-end">
+    <ul className="flex flex-row font-pixel flex-wrap items-center justify-center gap-2.5 lg:flex-col lg:items-end">
       {socials.map(({ label, Icon, href }, i) => (
         <li
           key={label}

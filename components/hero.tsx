@@ -1,6 +1,9 @@
 import Image from "next/image";
 import { ArrowUpRight } from "./icons";
 import SocialRail from "./social-rail";
+import TextType from './TextType';
+import Shuffle from './Shuffle';
+
 
 export default function Hero() {
   return (
@@ -20,12 +23,27 @@ export default function Hero() {
 
       {/* Left — intro copy */}
       <div
-        className="animate-rise z-20 max-w-[22rem] text-center  lg:absolute lg:top-auto lg:bottom-[20%] lg:left-14 lg:max-w-[20rem] lg:text-left xl:left-20 xl:max-w-[22rem]"
+        className="animate-rise z-20 max-w-[25rem] text-center  lg:absolute lg:top-auto lg:bottom-[20%] lg:left-14 lg:max-w-[25rem] lg:text-left xl:left-20 xl:max-w-[25rem]"
         style={{ animationDelay: "220ms" }}
       >
-        <h2 className="text-2xl w-fit cursor-target font-semibold tracking-tight sm:text-[26px]">
-          UI/UX Designer
-        </h2>
+        <Shuffle
+          className="text-3xl font-pixel  cursor-target font-semibold tracking-tight sm:text-[30px]"
+          textAlign="start"
+          text="Full-Stack Developer"
+          shuffleDirection="right"
+          duration={0.35}
+          animationMode="evenodd"
+          shuffleTimes={1}
+          ease="power3.out"
+          stagger={0.03}
+          threshold={0.1}
+          triggerOnce={true}
+          triggerOnHover
+          respectReducedMotion={true}
+          loop={false}
+          loopDelay={0}
+        />
+        
         <p className="mt-2.5 text-[13px] cursor-target leading-relaxed text-subtle sm:text-sm">
           Designing digital products that are clear, usable, and conversion
           focused.

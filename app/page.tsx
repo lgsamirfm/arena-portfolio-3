@@ -2,6 +2,7 @@ import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 import TargetCursor from "@/components/TargetCursor";
 
+
 export default function Home() {
   return (
     <main className="relative min-h-svh bg-paper">

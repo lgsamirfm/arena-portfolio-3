@@ -6,7 +6,7 @@
 
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
-
+  --font-pixel: var(--font-pixel);
   --color-ink: #0d0d0d;
   --color-paper: #ffffff;
   --color-muted: #8a8a8a;
