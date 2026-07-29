@@ -70,7 +70,7 @@ export default function Navbar() {
             <li key={link.label}>
               <a
                 href={link.href}
-                className="group cursor-target relative inline-flex items-baseline gap-1.5 rounded-full px-3 py-2 text-[15px] font-medium tracking-tight text-ink transition-colors hover:bg-black/[0.04] lg:px-4"
+                className="group cursor-target relative inline-flex items-baseline gap-1.5 rounded-full px-3 py-2 text-[15px] font-medium tracking-tight text-ink transition-colors  lg:px-4"
               >
                 <span className="relative">
                   {link.label}

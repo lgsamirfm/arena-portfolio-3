@@ -23,7 +23,7 @@ export default function Hero() {
 
       {/* Left — intro copy */}
       <div
-        className="animate-rise z-20 max-w-[25rem] text-center  lg:absolute lg:top-auto lg:bottom-[20%] lg:left-14 lg:max-w-[25rem] lg:text-left xl:left-20 xl:max-w-[25rem]"
+        className="animate-rise z-20 max-w-[25rem] text-center  lg:absolute lg:top-auto lg:bottom-[10%] lg:left-14 lg:max-w-[25rem] lg:text-left xl:left-20 xl:max-w-[25rem]"
         style={{ animationDelay: "220ms" }}
       >
         <Shuffle
