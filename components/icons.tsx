@@ -96,3 +96,57 @@ export function Behance({ className = "" }: IconProps) {
     </svg>
   );
 }
+
+export function Discord({ className = "" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.7}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className={`${base} ${className}`}
+    >
+      <path d="M19.2 5.9a15.6 15.6 0 0 0-4-1.2l-.5 1a14.2 14.2 0 0 0-5.4 0l-.5-1A15.6 15.6 0 0 0 4.8 5.9 15.9 15.9 0 0 0 2.4 17a16.3 16.3 0 0 0 5.2 2.6l1-1.7a10 10 0 0 1-1.7-.8l.4-.3a11.6 11.6 0 0 0 10.3 0l.4.3c-.6.3-1.1.6-1.7.8l1 1.7A16.3 16.3 0 0 0 21.6 17a15.9 15.9 0 0 0-2.4-11.1Z" />
+      <circle cx="9" cy="12.5" r="1.05" fill="currentColor" stroke="none" />
+      <circle cx="15" cy="12.5" r="1.05" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+export function Telegram({ className = "" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.7}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className={`${base} ${className}`}
+    >
+      <path d="m22 2-7 20-4-9-9-4Z" />
+      <path d="M22 2 11 13" />
+    </svg>
+  );
+}
+
+export function GitHub({ className = "" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.7}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className={`${base} ${className}`}
+    >
+      <path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" />
+    </svg>
+  );
+}

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Shuffle from "./Shuffle";
 import SplitText from "./SplitText";
+import { ArrowUpRight, Discord, GitHub, Instagram, Telegram } from "./icons";
 
 const stats = [
   { value: "9+", label: "Years Experience" },
@@ -75,23 +76,52 @@ const testimonials = [
   {
     name: "Sarah Mitchell",
     position: "Product Manager, Northwind",
-    initials: "SM",
+    // Placeholder portrait — swap for the client's real photo when available.
+    photo: "https://randomuser.me/api/portraits/women/68.jpg",
     quote:
       "Working with him was effortless. He understood the product vision quickly and delivered an interface that felt polished from day one.",
   },
   {
     name: "Daniel Reyes",
     position: "Founder, Studio Nine",
-    initials: "DR",
+    photo: "https://randomuser.me/api/portraits/men/32.jpg",
     quote:
       "Fast, reliable, and detail-obsessed. The new site loads instantly and our conversion rate jumped within weeks.",
   },
   {
     name: "Amelia Chen",
     position: "Creative Director, Axis Labs",
-    initials: "AC",
+    photo: "https://randomuser.me/api/portraits/women/44.jpg",
     quote:
       "A rare mix of engineering and design sensibility. Every interaction feels considered, and the codebase is a pleasure to maintain.",
+  },
+];
+
+// Contact channels — swap in your real handles and profile URLs.
+const contactChannels = [
+  {
+    label: "Discord",
+    handle: "@yourdiscord",
+    href: "https://discord.com/users/your-user-id",
+    Icon: Discord,
+  },
+  {
+    label: "Instagram",
+    handle: "@yourinstagram",
+    href: "https://instagram.com/yourinstagram",
+    Icon: Instagram,
+  },
+  {
+    label: "Telegram",
+    handle: "@yourtelegram",
+    href: "https://t.me/yourtelegram",
+    Icon: Telegram,
+  },
+  {
+    label: "GitHub",
+    handle: "@yourgithub",
+    href: "https://github.com/yourgithub",
+    Icon: GitHub,
   },
 ];
 
@@ -433,14 +463,18 @@ export default function AboutSection() {
               >
                 <figcaption className="flex items-center gap-4">
                   {/*
-                    Portrait placeholder: a monogram badge keeps the card
-                    clean until client photos are available to drop in here.
+                    Portrait placeholder: swap this URL for the client's real
+                    photo when one is available.
                   */}
-                  <span
-                    aria-hidden
-                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-ink font-pixel text-sm text-white"
-                  >
-                    {testimonial.initials}
+                  <span className="h-12 w-12 shrink-0 overflow-hidden rounded-full ring-1 ring-black/10">
+                    <Image
+                      src={testimonial.photo}
+                      alt=""
+                      width={48}
+                      height={48}
+                      sizes="48px"
+                      className="h-full w-full object-cover"
+                    />
                   </span>
                   <div>
                     <div className="text-sm font-semibold tracking-tight text-ink">
@@ -456,6 +490,84 @@ export default function AboutSection() {
                   &ldquo;{testimonial.quote}&rdquo;
                 </blockquote>
               </figure>
+            ))}
+          </div>
+        </section>
+
+        {/* 9 — Contact */}
+        <section
+          id="contact"
+          aria-labelledby="contact-heading"
+          className="mt-24 sm:mt-28 lg:mt-36"
+        >
+          <div className="animate-rise flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <Shuffle
+                text="Contact"
+                className="font-pixel text-sm font-semibold tracking-[0.2em] text-muted uppercase"
+                shuffleDirection="right"
+                duration={0.35}
+                animationMode="evenodd"
+                shuffleTimes={1}
+                ease="power3.out"
+                stagger={0.03}
+                threshold={0.1}
+                triggerOnce={true}
+                triggerOnHover
+                respectReducedMotion={true}
+                loop={false}
+                loopDelay={0}
+              />
+              <h2
+                id="contact-heading"
+                className="mt-3 cursor-target text-[11vw] leading-[0.85] font-semibold tracking-[-0.055em] text-ink sm:text-6xl lg:text-7xl"
+              >
+                Let&rsquo;s <span className="text-hollow">Talk</span>
+              </h2>
+            </div>
+            <SplitText
+              text="The fastest way to reach me is a direct message — Discord, Instagram, Telegram, or GitHub."
+              className="max-w-sm cursor-target text-center text-sm leading-relaxed text-muted"
+              delay={200}
+              duration={1.25}
+              ease="power3.out"
+              splitType="words"
+              from={{ opacity: 0, y: 40 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={0.1}
+              rootMargin="-100px"
+              textAlign="center"
+            />
+          </div>
+
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-5">
+            {contactChannels.map((channel, index) => (
+              <a
+                key={channel.label}
+                href={channel.href}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="group animate-rise cursor-target flex items-center gap-4 rounded-[2rem] bg-white p-6 shadow-[0_2px_22px_rgba(13,13,13,0.08)] ring-1 ring-black/5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_10px_34px_rgba(13,13,13,0.13)]"
+                style={{ animationDelay: `${160 + index * 90}ms` }}
+              >
+                <span
+                  aria-hidden
+                  className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-ink p-3 text-white transition-colors duration-300 group-hover:bg-signal"
+                >
+                  <channel.Icon />
+                </span>
+                <span className="min-w-0">
+                  <span className="block text-sm font-semibold tracking-tight text-ink">
+                    {channel.label}
+                  </span>
+                  <span className="mt-0.5 block truncate text-xs text-muted">
+                    {channel.handle}
+                  </span>
+                </span>
+                <span className="ml-auto h-3.5 w-3.5 shrink-0 text-ink transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                  <ArrowUpRight />
+                </span>
+              </a>
             ))}
           </div>
         </section>

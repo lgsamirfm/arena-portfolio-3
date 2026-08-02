@@ -1,8 +1,7 @@
-import Image from "next/image";
 import { ArrowUpRight } from "./icons";
 import SocialRail from "./social-rail";
-import TextType from './TextType';
 import Shuffle from './Shuffle';
+import HeroImage from './HeroImage';
 
 
 export default function Hero() {
@@ -61,15 +60,7 @@ export default function Hero() {
 
       {/* Center — portrait, layered above the headline */}
       <div className="animate-fade z-[15] flex w-full justify-center lg:absolute lg:inset-x-0 lg:bottom-0">
-        <Image
-          src="/portrait.png"
-          alt="Portrait of Dymas Alfin"
-          width={1078}
-          height={1012}
-          priority
-          sizes="(max-width: 1024px) 70vw, 52vw"
-          className="h-auto  w-[70vw] max-w-[340px] object-contain object-bottom [mask-image:linear-gradient(to_bottom,black_86%,transparent_100%)] lg:max-h-[72vh] lg:w-[52vw] lg:max-w-[640px] lg:[mask-image:none]"
-        />
+        <HeroImage className="w-[80vw] max-w-[420px] lg:w-[60vw] lg:max-w-[780px]" />
       </div>
 
       {/* Right — social links */}
